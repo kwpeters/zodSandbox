@@ -29,3 +29,14 @@ else {
     console.log("User is invalid.");
     console.log(res.error.issues);
 }
+
+
+// Gives definitions for each element in the schema:
+// userSchema.shape
+
+// Use partial() to get a schema where every property is optional.
+// Useful when validating user entered data in a form where the entire form
+// may not be completely filled out yet.
+const partialUserSchema = userSchema.partial();
+
+// Use schema.pick() and schema.omit()
